@@ -1,8 +1,10 @@
-//import { useState } from 'react'
 
 
- import style from "./App.module.scss"
-function App() {
+
+import style from "./App.module.scss"
+
+
+function App() {  
   return <h1 className={style.h1}>Welcome</h1>
 }
 
