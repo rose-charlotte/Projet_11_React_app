@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  margin: 50px;
+  justify-content: space-between;
+}
+.listContainer {
+  display: flex;
+}
+.listItem {
+  list-style-type: none;
+}
