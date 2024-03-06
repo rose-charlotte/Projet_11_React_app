@@ -5,8 +5,11 @@ export function Header() {
   return (
     <div className={style.container}>
       <picture>
-        <source srcSet="src/assets/D_LOGO.png" media="(min-width: 481px)" />
-        <img src="src/assets/M_LOGO.png" alt="Logo Kasa" />
+        <source
+          srcSet="src/assets/images/D_LOGO.png"
+          media="(min-width: 481px)"
+        />
+        <img src="src/assets/images/M_LOGO.png" alt="Logo Kasa" />
       </picture>
 
       <ul className={style.listContainer}>
