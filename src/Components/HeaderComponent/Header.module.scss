@@ -1,11 +1,31 @@
 .container {
   display: flex;
-  margin: 50px;
   justify-content: space-between;
+  margin: 20px;
 }
 .listContainer {
   display: flex;
+  gap: 30px;
 }
 .listItem {
   list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+@media (min-width: 481px) {
+  .container {
+    margin: 100px;
+  }
+
+  .listItem {
+    list-style-type: none;
+  }
+
+  .link {
+    font-size: 24px;
+  }
 }
