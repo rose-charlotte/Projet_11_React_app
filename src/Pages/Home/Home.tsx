@@ -7,9 +7,11 @@ export function Home() {
   return (
     <div className={style.container}>
       <Banner />
-      {data.map((data) => (
-        <Card title={data.title} cover={data.cover} key={data.id} />
-      ))}
+      <div className={style.cardsContainer}>
+        {data.map((data) => (
+          <Card title={data.title} cover={data.cover} key={data.id} />
+        ))}
+      </div>
     </div>
   );
 }
