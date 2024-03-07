@@ -6,6 +6,8 @@
 .listContainer {
   display: flex;
   gap: 30px;
+  flex-direction: row;
+  align-items: center;
 }
 .listItem {
   list-style-type: none;
