@@ -1,5 +1,15 @@
-import style from "./Home.module.scss"
+import { Banner } from "../../Components/BannerComponent/Banner";
+import { Card } from "../../Components/CardComponent/Card";
+import style from "./Home.module.scss";
+import data from "../../assets/Data/data.json";
 
-export function Home(){
-    return (<h1 className={style.title}>Home</h1>)
+export function Home() {
+  return (
+    <div className={style.container}>
+      <Banner />
+      {data.map((data) => (
+        <Card title={data.title} cover={data.cover} key={data.id} />
+      ))}
+    </div>
+  );
 }
