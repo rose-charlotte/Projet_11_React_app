@@ -1,5 +1,5 @@
-import { Banner } from "../../Components/BannerComponent/Banner";
-import { DropDown } from "../../Components/DropdownComponent/DropDown";
+import { Banner } from "../../Components/Banner/Banner";
+import { DropDown } from "../../Components/Dropdown/DropDown";
 import style from "./About.module.scss";
 
 export function About() {

@@ -3,19 +3,19 @@ import style from "./DropDown.module.scss";
 
 export function DropDown(props: DropDownProps) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
 
-  function openDropdown() {
+  function toggleDropdown() {
     setIsOpen(!isOpen);
   }
 
   return (
     <div className={style.container}>
-      <h1 className={style.title}>{props.title}</h1>
-      <button onClick={openDropdown} className={style.arrow}>
+      <span className={style.title}>{props.title}</span>
+      <button onClick={toggleDropdown} className={style.arrow}>
         <img
           className={style.img}
           src="src/assets/images/arrow_back_ios-24px 2.png"
+          alt="arrow"
         />
       </button>
       {isOpen && <div>ca marche</div>}
