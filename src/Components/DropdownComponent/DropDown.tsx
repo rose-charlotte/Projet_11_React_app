@@ -9,10 +9,6 @@ export function DropDown(props: DropDownProps) {
     setIsOpen(!isOpen);
   }
 
-  if (isOpen) {
-    console.log("ok");
-  }
-
   return (
     <div className={style.container}>
       <h1 className={style.title}>{props.title}</h1>
@@ -22,6 +18,7 @@ export function DropDown(props: DropDownProps) {
           src="src/assets/images/arrow_back_ios-24px 2.png"
         />
       </button>
+      {isOpen && <div>ca marche</div>}
     </div>
   );
 }
