@@ -1,5 +1,5 @@
-import { Banner } from "../../Components/BannerComponent/Banner";
-import { Card } from "../../Components/CardComponent/Card";
+import { Banner } from "../../Components/Banner/Banner";
+import { Card } from "../../Components/Card/Card";
 import style from "./Home.module.scss";
 import data from "../../assets/Data/data.json";
 
@@ -7,8 +7,8 @@ export function Home() {
   return (
     <div className={style.container}>
       <Banner
-        source="src/assets/images/M_Section 1.png"
-        sourceSet="src/assets/images/D_Section1.png"
+        source="src/assets/images/bannerHome.png"
+        text="Chez vous, partout et ailleurs"
       />
       <div className={style.cardsContainer}>
         {data.map((data) => (
