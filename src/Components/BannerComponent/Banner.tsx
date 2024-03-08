@@ -1,17 +1,17 @@
 import style from "./Banner.module.scss";
 
-export function Banner() {
+export function Banner(props: BannerProps) {
   return (
-    <picture className={style.imgContainer}>
-      <source
-        srcSet="src/assets/images/D_Section1.png"
-        media="(min-width: 481px)"
-      />
-      <img
-        className={style.img}
-        src="src/assets/images/M_Section 1.png"
-        alt="Chez vous, partout et ailleurs"
-      />
-    </picture>
+    <div>
+      <picture className={style.imgContainer}>
+        <source srcSet={props.sourceSet} media="(min-width: 481px)" />
+        <img className={style.img} src={props.source} alt="bannière" />
+      </picture>
+    </div>
   );
+}
+
+export interface BannerProps {
+  source: string;
+  sourceSet: string;
 }
