@@ -3,22 +3,23 @@
   justify-content: space-between;
   margin: 20px;
 }
-.listContainer {
+
+.navLinkContainer {
   display: flex;
   gap: 30px;
   flex-direction: row;
   align-items: center;
-}
-.listItem {
-  list-style-type: none;
-}
-
-.link {
-  text-decoration: none;
   font-size: 12px;
 }
-.link:focus {
+
+.active {
   text-decoration: underline;
+  color: black;
+}
+
+.inactive {
+  text-decoration: none;
+  color: black;
 }
 
 @media (min-width: 481px) {
@@ -26,11 +27,7 @@
     margin: 100px;
   }
 
-  .listItem {
-    list-style-type: none;
-  }
-
-  .link {
+  .navLinkContainer {
     font-size: 24px;
   }
 }
