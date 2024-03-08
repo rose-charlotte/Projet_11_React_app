@@ -1,6 +1,10 @@
 @use "./_reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+$red-color: #ff6060;
+
 body {
   font-family: "Montserrat", serif;
+  width: 100vw;
+  overflow-x: hidden;
 }
