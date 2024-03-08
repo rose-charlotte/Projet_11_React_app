@@ -17,6 +17,9 @@
   text-decoration: none;
   font-size: 12px;
 }
+.link:focus {
+  text-decoration: underline;
+}
 
 @media (min-width: 481px) {
   .container {
