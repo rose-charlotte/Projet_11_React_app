@@ -1,17 +1,11 @@
 import style from "./Footer.module.scss";
+import Logo from "../../assets/images/LOGO.svg?react";
 
 export function Footer() {
   return (
-    <picture className={style.container}>
-      <source
-        srcSet="src/assets/images/D_Footer.png"
-        media="(min-width: 481px)"
-      />
-      <img
-        className={style.img}
-        src="src/assets/images/M_Footer.png"
-        alt="footer Kasa"
-      />
-    </picture>
+    <div className={style.container}>
+      <Logo />
+      <span>© 2020 Kasa. All rights reserved</span>
+    </div>
   );
 }

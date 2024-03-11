@@ -1,8 +1,20 @@
 .container {
   display: flex;
-  margin-top: 27px;
+  background-color: black;
+  height: 100px;
+  color: white;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: 50px;
+  justify-content: center;
+  min-height: 11rem;
 }
 
 .img {
   width: 100%;
+}
+
+span {
+  width: 40%;
 }
