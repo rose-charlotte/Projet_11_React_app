@@ -15,5 +15,5 @@ export function Banner(props: BannerProps) {
 
 export interface BannerProps {
   source: string;
-  text: string;
+  text?: string;
 }
