@@ -26,9 +26,10 @@
 
 @media (min-width: 481px) {
   .container {
-    width: 29vw;
+    width: 340px;
   }
   .img {
     height: 340px;
+    max-width: 340px;
   }
 }

@@ -1,7 +1,6 @@
 .container {
   display: flex;
   background-color: black;
-  height: 100px;
   color: white;
   flex-direction: column;
   flex-wrap: wrap;
@@ -9,12 +8,22 @@
   margin-top: 50px;
   justify-content: center;
   min-height: 11rem;
+  gap: 15px;
 }
 
-.img {
-  width: 100%;
+.text {
+  width: 30%;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
 }
 
-span {
-  width: 40%;
+@media (min-width: 481px) {
+  .text {
+    font-size: 24px;
+    text-align: center;
+  }
+  .svg {
+    align-self: center;
+  }
 }
