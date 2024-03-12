@@ -19,10 +19,10 @@ export function Logement() {
       <Slideshow photos={dataElement!.pictures} />
       <Infos title={dataElement!.title} location={dataElement!.location} />
       <Tag tags={dataElement!.tags} />
-
-      <Rating />
-      <Host name={dataElement!.host.name} image={dataElement!.host.picture} />
-
+      <div className={style.host}>
+        <Rating />
+        <Host name={dataElement!.host.name} image={dataElement!.host.picture} />
+      </div>
       <Accordeon title="Description" description={dataElement?.description} />
       <Accordeon title="Equipement" list={dataElement?.equipments} />
     </div>

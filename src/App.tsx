@@ -6,8 +6,6 @@ import { Page404 } from "./Pages/Page404/Page404";
 import { Layout } from "./Pages/Layout/Layout";
 
 function App() {
-  // const { id } = useParams();
-  // console.log(id);
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
