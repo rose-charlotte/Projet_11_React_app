@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.slideContainer {
+  width: 335px;
+  height: 255px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.arrowF {
+  z-index: 1;
+  position: absolute;
+  left: 90%;
+  cursor: pointer;
+}
+
+.arrowB {
+  z-index: 1;
+  position: absolute;
+  left: 3%;
+  cursor: pointer;
+}
