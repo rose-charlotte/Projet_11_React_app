@@ -1,5 +1,5 @@
 import { Banner } from "../../Components/Banner/Banner";
-import { Accordeon } from "../../Components/Accordeon/Accordeon";
+import { Accordeon } from "../../Components/Accordeon/Accordeon.tsx";
 import style from "./About.module.scss";
 
 export function About() {
