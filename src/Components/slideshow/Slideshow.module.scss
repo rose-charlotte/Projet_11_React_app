@@ -14,6 +14,7 @@
 
 .img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -29,4 +30,23 @@
   position: absolute;
   left: 3%;
   cursor: pointer;
+}
+
+.pageNum {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (min-width: 481px) {
+  .slideContainer {
+    width: 1240px;
+    height: 415px;
+  }
+  .arrowF {
+    left: 95%;
+  }
 }
