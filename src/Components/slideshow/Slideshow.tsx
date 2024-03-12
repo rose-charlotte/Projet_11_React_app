@@ -11,30 +11,37 @@ export function Slideshow(props: SlideshowProps) {
     setIndex((prevIndex) => prevIndex - 1);
 
     if (index <= 0) {
-      setIndex(index);
+      setIndex((prevIndex) => prevIndex + props.photos.length);
     }
   };
   const moveForward = () => {
     setIndex((prevIndex) => prevIndex + 1);
     if (index >= props.photos.length - 1) {
-      setIndex(index);
+      setIndex((prevIndex) => prevIndex - props.photos.length);
     }
   };
-  const minIndex = index > 0;
-  const maxIndex = index < props.photos.length - 1;
+
+  const monoPhoto = props.photos.length === 1;
   return (
     <div className={style.container}>
       <div className={style.slideContainer}>
-        {minIndex && (
+        {!monoPhoto && (
           <ArrowBackward onClick={moveBackward} className={style.arrowB} />
         )}
+
         <img
           className={style.img}
           src={props.photos[index]}
           alt="photo logement"
         />
 
-        {maxIndex && (
+        {!monoPhoto && (
+          <p className={style.pageNum}>
+            {index + 1}/{props.photos.length}
+          </p>
+        )}
+
+        {!monoPhoto && (
           <ArrowForward onClick={moveForward} className={style.arrowF} />
         )}
       </div>
