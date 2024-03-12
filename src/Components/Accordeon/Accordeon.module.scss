@@ -38,6 +38,9 @@
 .text {
   animation: fadeIn 0.5s;
 }
+.list {
+  width: 100%;
+}
 
 @media (min-width: 481px) {
   .container {

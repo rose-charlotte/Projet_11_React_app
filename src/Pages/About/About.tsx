@@ -30,7 +30,7 @@ export function About() {
   return (
     <div className={style.container}>
       <Banner source="src/assets/images/bannerAbout.png" />
-      <div className={style.dropDownContainer}>
+      <div className={style.accordeonContainer}>
         {aboutElements.map((element) => (
           <Accordeon
             title={element.title}

@@ -1,3 +1,24 @@
-.title {
-    color: black;
+@import "../../index.scss";
+
+.tag {
+  width: 84px;
+  height: 18px;
+  color: white;
+  background-color: $red-color;
+  font-size: 10px;
+}
+
+.accordeonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+  width: 80%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

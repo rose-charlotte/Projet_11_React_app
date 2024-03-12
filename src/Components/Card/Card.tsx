@@ -3,7 +3,7 @@ import style from "./Card.module.scss";
 
 export function Card(props: CardProps) {
   return (
-    <Link to="/logement">
+    <Link to={`/logement/${props.id}`}>
       <div className={style.container}>
         <h1 className={style.title}>{props.title}</h1>
         <img className={style.img} src={props.cover} />
@@ -13,6 +13,7 @@ export function Card(props: CardProps) {
 }
 
 export interface CardProps {
+  id: string;
   title: string;
   cover: string;
 }

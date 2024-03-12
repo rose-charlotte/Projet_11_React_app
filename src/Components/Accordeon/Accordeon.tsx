@@ -31,6 +31,11 @@ export function Accordeon(props: DropDownProps) {
       {isOpen && (
         <div className={style.description}>
           <div className={style.text}> {props.description}</div>
+          <ul className={style.list}>
+            {props.list?.map((equipement) => (
+              <li>{equipement}</li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
@@ -38,5 +43,6 @@ export function Accordeon(props: DropDownProps) {
 }
 export interface DropDownProps {
   title: string;
-  description: string;
+  description?: string;
+  list?: string[];
 }
