@@ -4,7 +4,9 @@ export function Tag(props: TagProps) {
   return (
     <div className={style.container}>
       {props.tags.map((tag) => (
-        <div className={style.tag}>{tag}</div>
+        <div key={tag} className={style.tag}>
+          {tag}
+        </div>
       ))}
     </div>
   );
