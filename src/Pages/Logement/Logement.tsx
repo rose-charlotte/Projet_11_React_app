@@ -11,8 +11,8 @@ import { Infos } from "../../Components/Infos/Infos.tsx";
 
 export function Logement() {
   const { id } = useParams();
-
   const dataElement = data.find((data) => data.id === id);
+  const rateInNumber = parseInt(dataElement!.rating);
 
   return (
     <div className={style.container}>
@@ -20,11 +20,13 @@ export function Logement() {
       <Infos title={dataElement!.title} location={dataElement!.location} />
       <Tag tags={dataElement!.tags} />
       <div className={style.host}>
-        <Rating />
+        <Rating rate={rateInNumber} />
         <Host name={dataElement!.host.name} image={dataElement!.host.picture} />
       </div>
-      <Accordeon title="Description" description={dataElement?.description} />
-      <Accordeon title="Equipement" list={dataElement?.equipments} />
+      <div className={style.accordeonContainer}>
+        <Accordeon title="Description" description={dataElement?.description} />
+        <Accordeon title="Equipement" list={dataElement?.equipments} />
+      </div>
     </div>
   );
 }
