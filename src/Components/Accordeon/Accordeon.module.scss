@@ -3,7 +3,6 @@
 .container {
   display: flex;
   flex-direction: column;
-
   width: 100%;
   padding: 0px 10px;
 }
@@ -45,9 +44,13 @@
 @media (min-width: 481px) {
   .container {
     font-size: 18px;
+    padding: 0;
   }
   .description {
     width: 98%;
+  }
+  .title {
+    font-size: 18px;
   }
 }
 

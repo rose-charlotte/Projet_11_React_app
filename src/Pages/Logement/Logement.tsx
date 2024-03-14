@@ -17,15 +17,31 @@ export function Logement() {
   return (
     <div className={style.container}>
       <Slideshow photos={dataElement!.pictures} />
-      <Infos title={dataElement!.title} location={dataElement!.location} />
-      <Tag tags={dataElement!.tags} />
-      <div className={style.host}>
-        <Rating rate={rateInNumber} />
-        <Host name={dataElement!.host.name} image={dataElement!.host.picture} />
-      </div>
-      <div className={style.accordeonContainer}>
-        <Accordeon title="Description" description={dataElement?.description} />
-        <Accordeon title="Equipement" list={dataElement?.equipments} />
+
+      <div className={style.infoContainer}>
+        <div className={style.subcontainer}>
+          <div className={style.locationInfo}>
+            <Infos
+              title={dataElement!.title}
+              location={dataElement!.location}
+            />
+            <Tag tags={dataElement!.tags} />
+          </div>
+          <div className={style.host}>
+            <Rating rate={rateInNumber} />
+            <Host
+              name={dataElement!.host.name}
+              image={dataElement!.host.picture}
+            />
+          </div>
+        </div>
+        <div className={style.accordeonContainer}>
+          <Accordeon
+            title="Description"
+            description={dataElement?.description}
+          />
+          <Accordeon title="Equipement" list={dataElement?.equipments} />
+        </div>
       </div>
     </div>
   );

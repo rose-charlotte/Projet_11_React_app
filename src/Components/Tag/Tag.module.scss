@@ -18,3 +18,11 @@
   padding: 2px;
   text-align: center;
 }
+
+@media (min-width: 481px) {
+  .tag {
+    width: 115px;
+    height: 25px;
+    font-size: 14px;
+  }
+}

@@ -19,3 +19,18 @@
   border-radius: 50%;
   width: 40%;
 }
+
+@media (min-width: 481px) {
+  .container {
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+  }
+  .name {
+    width: 60%;
+    font-size: 18px;
+  }
+  .img {
+    width: 64px;
+  }
+}
