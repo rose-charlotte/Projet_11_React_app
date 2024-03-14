@@ -14,7 +14,12 @@ export function Home() {
       </div>
       <div className={style.cardsContainer}>
         {data.map((data) => (
-          <Card title={data.title} cover={data.cover} key={data.id} />
+          <Card
+            title={data.title}
+            cover={data.cover}
+            id={data.id}
+            key={data.id}
+          />
         ))}
       </div>
     </div>

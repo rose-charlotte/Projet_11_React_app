@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ArrowUp from "../../assets/images/ArrowUp.svg?react";
+import ArrowDown from "../../assets/images/ArrowDown.svg?react";
 import style from "./Accordeon.module.scss";
 
 export function Accordeon(props: DropDownProps) {
@@ -12,25 +14,18 @@ export function Accordeon(props: DropDownProps) {
     <div className={style.container}>
       <button onClick={toggleDropdown} className={style.arrow}>
         <span className={style.title}>{props.title}</span>
-        {!isOpen && (
-          <img
-            className={style.img}
-            src="src/assets/images/arrowUp.png"
-            alt="arrow"
-          />
-        )}
-        {isOpen && (
-          <img
-            className={style.img}
-            src="src/assets/images/arrowDown.png"
-            alt="arrow"
-          />
-        )}
+        {!isOpen && <ArrowUp />}
+        {isOpen && <ArrowDown />}
       </button>
 
       {isOpen && (
         <div className={style.description}>
           <div className={style.text}> {props.description}</div>
+          <ul className={style.list}>
+            {props.list?.map((equipement) => (
+              <li>{equipement}</li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
@@ -38,5 +33,6 @@ export function Accordeon(props: DropDownProps) {
 }
 export interface DropDownProps {
   title: string;
-  description: string;
+  description?: string;
+  list?: string[];
 }

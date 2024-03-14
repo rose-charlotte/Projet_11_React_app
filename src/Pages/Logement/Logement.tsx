@@ -1,19 +1,48 @@
+import { useParams } from "react-router";
+import { Rating } from "../../Components/Rating/Rating.tsx";
+import { Accordeon } from "../../Components/Accordeon/Accordeon.tsx";
 import { Slideshow } from "../../Components/slideshow/Slideshow.tsx";
 import style from "./Logement.module.scss";
 
-export function Logement() {
-  const photos = [
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg",
-  ];
-  return (
-    <>
-      <h1 className={style.title}>Logement</h1>
+import data from "../../assets/Data/data.json";
+import { Host } from "../../Components/Host/Host.tsx";
+import { Tag } from "../../Components/Tag/Tag.tsx";
+import { Infos } from "../../Components/Infos/Infos.tsx";
 
-      <Slideshow photos={photos} />
-    </>
+export function Logement() {
+  const { id } = useParams();
+  const dataElement = data.find((data) => data.id === id);
+  const rateInNumber = parseInt(dataElement!.rating);
+
+  return (
+    <div className={style.container}>
+      <Slideshow photos={dataElement!.pictures} />
+
+      <div className={style.infoContainer}>
+        <div className={style.subcontainer}>
+          <div className={style.locationInfo}>
+            <Infos
+              title={dataElement!.title}
+              location={dataElement!.location}
+            />
+            <Tag tags={dataElement!.tags} />
+          </div>
+          <div className={style.host}>
+            <Rating rate={rateInNumber} />
+            <Host
+              name={dataElement!.host.name}
+              image={dataElement!.host.picture}
+            />
+          </div>
+        </div>
+        <div className={style.accordeonContainer}>
+          <Accordeon
+            title="Description"
+            description={dataElement?.description}
+          />
+          <Accordeon title="Equipement" list={dataElement?.equipments} />
+        </div>
+      </div>
+    </div>
   );
 }

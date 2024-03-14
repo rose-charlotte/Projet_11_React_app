@@ -1,0 +1,27 @@
+@import "../../index.scss";
+
+.title {
+  color: $red-color;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.location {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 481px) {
+  .title {
+    font-size: 36px;
+  }
+  .location {
+    font-size: 18px;
+  }
+}
