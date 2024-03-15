@@ -23,7 +23,7 @@ export function Accordeon(props: DropDownProps) {
           <div className={style.text}> {props.description}</div>
           <ul className={style.list}>
             {props.list?.map((equipement) => (
-              <li>{equipement}</li>
+              <li key={equipement}>{equipement}</li>
             ))}
           </ul>
         </div>
