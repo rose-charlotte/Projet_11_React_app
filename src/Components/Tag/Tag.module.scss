@@ -6,7 +6,7 @@
 }
 
 .tag {
-  width: 84px;
+  min-width: 84px;
   height: 18px;
   color: white;
   background-color: $red-color;
@@ -15,14 +15,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2px;
+  padding: 5px;
   text-align: center;
   margin-top: 10px;
 }
 
 @media (min-width: 481px) {
   .tag {
-    width: 115px;
+    min-width: 115px;
     height: 25px;
     font-size: 14px;
   }

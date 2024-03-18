@@ -15,7 +15,7 @@ export function Logement() {
   const rateInNumber = parseInt(dataElement.rating);
 
   return (
-    <div className={style.container}>
+    <main className={style.container}>
       <Slideshow photos={dataElement.pictures} />
 
       <div className={style.infoContainer}>
@@ -35,11 +35,14 @@ export function Logement() {
         <div className={style.accordeonContainer}>
           <Accordeon
             title="Description"
-            description={dataElement?.description}
-          />
-          <Accordeon title="Equipement" list={dataElement?.equipments} />
+            description={dataElement.description}
+          ></Accordeon>
+          <Accordeon
+            title="Equipements"
+            list={dataElement.equipments}
+          ></Accordeon>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

@@ -5,7 +5,7 @@ import data from "../../assets/Data/data.json";
 
 export function Home() {
   return (
-    <div className={style.container}>
+    <main className={style.container}>
       <div className={style.bannerHome}>
         <Banner
           source="src/assets/images/bannerHome.png"
@@ -22,6 +22,6 @@ export function Home() {
           />
         ))}
       </div>
-    </div>
+    </main>
   );
 }

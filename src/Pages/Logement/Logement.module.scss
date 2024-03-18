@@ -55,3 +55,10 @@
     flex-direction: column;
   }
 }
+
+@media (min-width: 1500px) {
+  .infoContainer {
+    margin-left: 319px;
+    margin-right: 316px;
+  }
+}

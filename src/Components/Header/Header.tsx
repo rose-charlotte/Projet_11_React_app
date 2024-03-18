@@ -4,7 +4,7 @@ import Logo from "../../assets/images/LOGO.svg?react";
 
 export function Header() {
   return (
-    <div className={style.container}>
+    <header className={style.container}>
       <Logo className={style.logo} />
 
       <div className={style.navLinkContainer}>
@@ -25,6 +25,6 @@ export function Header() {
           A Propos
         </NavLink>
       </div>
-    </div>
+    </header>
   );
 }

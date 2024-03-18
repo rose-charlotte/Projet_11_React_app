@@ -30,7 +30,7 @@
 
 @media (min-width: 481px) {
   .container {
-    margin: 3rem;
+    margin: 5rem 5.5rem;
   }
 
   .navLinkContainer {
@@ -40,5 +40,12 @@
   .logo {
     width: 210px;
     height: 68px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    justify-content: space-around;
+    gap: 20%;
   }
 }

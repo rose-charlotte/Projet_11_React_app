@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
 }
 .accordeonContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin: 20px;
+  margin: 60px;
   width: 80%;
 }

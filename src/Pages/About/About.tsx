@@ -28,7 +28,7 @@ export function About() {
   ];
 
   return (
-    <div className={style.container}>
+    <main className={style.container}>
       <Banner source="src/assets/images/bannerAbout.png" />
       <div className={style.accordeonContainer}>
         {aboutElements.map((element) => (
@@ -39,6 +39,6 @@ export function About() {
           />
         ))}
       </div>
-    </div>
+    </main>
   );
 }
