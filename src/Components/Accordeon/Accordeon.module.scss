@@ -38,11 +38,8 @@
   font-family: "Montserrat", serif;
 }
 
-.text {
-  animation: fadeIn 0.5s;
-}
-.list {
-  width: 100%;
+.accordionBody {
+  width: 93%;
   animation: fadeIn 0.5s;
 }
 
@@ -84,11 +81,9 @@
 @keyframes rotating {
   from {
     transform: rotate(0deg);
-    //transform-origin: 50% 50%;
   }
   to {
     transform: rotate(180deg);
-    // transform-origin: 50% 50%;
   }
 }
 

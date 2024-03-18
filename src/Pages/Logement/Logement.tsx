@@ -33,14 +33,16 @@ export function Logement() {
           </div>
         </div>
         <div className={style.accordeonContainer}>
-          <Accordeon
-            title="Description"
-            description={dataElement.description}
-          ></Accordeon>
-          <Accordeon
-            title="Equipements"
-            list={dataElement.equipments}
-          ></Accordeon>
+          <Accordeon title="Description">
+            <p> {dataElement.description}</p>
+          </Accordeon>
+          <Accordeon title="Equipements">
+            <ul>
+              {dataElement.equipments.map((equipment: string) => (
+                <li key={equipment}>{equipment}</li>
+              ))}
+            </ul>
+          </Accordeon>
         </div>
       </div>
     </main>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import ArrowUp from "../../assets/images/ArrowUp.svg?react";
 //import ArrowDown from "../../assets/images/ArrowDown.svg?react";
 import style from "./Accordeon.module.scss";
@@ -26,12 +26,7 @@ export function Accordeon(props: DropDownProps) {
 
       {isOpen && (
         <div className={style.description}>
-          <div className={style.text}> {props.description}</div>
-          <ul className={style.list}>
-            {props.list?.map((equipement) => (
-              <li key={equipement}>{equipement}</li>
-            ))}
-          </ul>
+          <div className={style.accordionBody}>{props.children}</div>
         </div>
       )}
     </div>
@@ -39,6 +34,5 @@ export function Accordeon(props: DropDownProps) {
 }
 export interface DropDownProps {
   title: string;
-  description?: string;
-  list?: string[];
+  children: ReactNode;
 }

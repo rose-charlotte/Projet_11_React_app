@@ -32,11 +32,9 @@ export function About() {
       <Banner source="src/assets/images/bannerAbout.png" />
       <div className={style.accordeonContainer}>
         {aboutElements.map((element) => (
-          <Accordeon
-            title={element.title}
-            description={element.description}
-            key={element.title}
-          />
+          <Accordeon title={element.title} key={element.title}>
+            <p>{element.description}</p>
+          </Accordeon>
         ))}
       </div>
     </main>
