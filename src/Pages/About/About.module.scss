@@ -2,13 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1;
+  flex-grow: 2;
 }
 .accordeonContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin: 60px;
-  width: 80%;
+  margin: 30px;
+  width: 90%;
+}
+
+@media (min-width: 481px) {
+  .accordeonContainer {
+    width: 80%;
+  }
 }
