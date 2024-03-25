@@ -33,12 +33,7 @@
 }
 
 .pageNum {
-  position: absolute;
-  left: 50%;
-  top: 90%;
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
+  display: none;
 }
 
 @media (min-width: 481px) {
@@ -48,5 +43,15 @@
   }
   .arrowF {
     left: 95%;
+  }
+
+  .pageNum {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
   }
 }
