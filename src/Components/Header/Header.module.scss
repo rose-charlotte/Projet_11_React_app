@@ -3,7 +3,7 @@
 .container {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  margin: 20px 0px;
   flex-grow: 1;
 }
 
@@ -31,7 +31,7 @@
 
 @media (min-width: 481px) {
   .container {
-    margin: 5rem 5.5rem;
+    margin: 50px 0px;
   }
 
   .navLinkContainer {
@@ -46,7 +46,6 @@
 
 @media (min-width: 1500px) {
   .container {
-    justify-content: space-around;
-    gap: 72%;
+    justify-content: space-between;
   }
 }
